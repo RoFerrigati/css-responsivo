@@ -1,0 +1,163 @@
+/* Resetando o estilo padrão de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Cor de fundo escura */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens para os lados */
+    align-items: center; /* Alinha verticalmente */
+    padding: 20px;
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #00ff00; /* Texto verde neon */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+nav.menu {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+nav.menu a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav.menu a:hover {
+    color: #009900;
+}
+
+/* Seção Sobre a Loja */
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #181818;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.sobre-coluna {
+    flex: 1;
+    padding: 20px;
+}
+
+.sobre h1 {
+    color: #00ff00;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.foto-loja {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Produtos */
+.produtos {
+    padding: 40px 20px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.produtos h2 {
+    margin-bottom: 20px;
+    color: #00ff00;
+    font-size: 30px;
+}
+
+.lista-produtos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.produto {
+    flex: none;
+    width: 300px; /* Ajuste de largura consistente */
+    background: #1a1a1a;
+    padding: 10px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    margin: 10px 0;
+    color: #00ff00;
+    font-size: 20px;
+}
+
+.produto p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.btn-carrinho {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00ff00;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-carrinho:hover {
+    background: #009900;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .lista-produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .produto {
+        width: 80%;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    nav.menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.menu a {
+        margin-bottom: 10px;
+    }
+}
